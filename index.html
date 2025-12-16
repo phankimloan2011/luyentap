@@ -2,105 +2,56 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>LMS Tin học Tiểu học</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện tập Tin học</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{box-sizing:border-box;}
 body{
   margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
-  background:linear-gradient(180deg,#e0f2fe,#f0f9ff);
+  font-family:Arial;
+  background:#fff7ed;
 }
-
-/* ===== HEADER ===== */
 header{
-  background:linear-gradient(90deg,#2563eb,#3b82f6);
-  color:#fff;
+  background:#f97316;
+  color:white;
   text-align:center;
-  padding:35px 15px;
+  padding:20px;
+  font-size:26px;
 }
-header h1{
-  margin:0;
-  font-size:34px;
-}
-header p{
-  margin-top:10px;
-  font-size:18px;
-}
-
-/* ===== CONTAINER ===== */
 .container{
-  max-width:1400px;
-  margin:40px auto;
+  max-width:900px;
+  margin:30px auto;
   padding:15px;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:25px;
 }
-
-/* ===== CARD ===== */
 .card{
-  border-radius:26px;
-  padding:40px 20px;
-  text-align:center;
-  color:#fff;
-  box-shadow:0 14px 30px rgba(0,0,0,0.18);
-  transition:all 0.25s ease;
-  cursor:pointer;
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.1);
 }
-.card:hover{
-  transform:translateY(-10px) scale(1.05);
-}
-
-/* ICON */
-.icon{
-  font-size:70px;
-  margin-bottom:18px;
-  display:inline-block;
-  animation:bounce 2s infinite;
-}
-
-/* TITLE */
-.card h2{
-  margin:10px 0 20px;
-  font-size:28px;
-}
-
-/* BUTTON */
-.card a{
-  display:inline-block;
-  padding:14px 28px;
-  background:rgba(255,255,255,0.25);
-  color:#fff;
-  border-radius:18px;
+.card h2{margin:0;}
+.btn{
+  background:#22c55e;
+  color:white;
+  padding:12px 20px;
+  border-radius:12px;
   text-decoration:none;
-  font-size:18px;
-  font-weight:700;
-  pointer-events:none; /* tránh click riêng nút */
+  font-weight:bold;
 }
-
-
-/* ===== ANIMATION ===== */
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-8px);}
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:25px;
-  color:#555;
-  font-size:14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width:1000px){
-  .container{grid-template-columns:repeat(2,1fr);}
-}
-@media (max-width:600px){
-  .container{grid-template-columns:1fr;}
+.back{
+  position:fixed;
+  top:10px;
+  left:10px;
+  background:#ef4444;
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
 }
 </style>
 </head>
