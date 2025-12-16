@@ -8,91 +8,146 @@
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:#fff7ed;
 }
+
+/* HEADER */
 header{
   background:linear-gradient(90deg,#2563eb,#3b82f6);
-  color:#fff;
+  color:white;
   text-align:center;
   padding:35px 15px;
 }
+
+/* CONTAINER */
 .container{
-  max-width:900px;
+  max-width:1100px;
   margin:30px auto;
   padding:15px;
 }
+
+/* TIÊU ĐỀ NHÓM */
+.group-title{
+  font-size:24px;
+  font-weight:bold;
+  margin:25px 0 15px;
+  color:#1f2937;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+/* CARD */
 .card{
-  background:white;
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 8px 18px rgba(0,0,0,0.1);
+  border-radius:22px;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 10px 22px rgba(0,0,0,0.12);
+  transition:0.25s;
 }
-.card h2{margin:0;}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* TITLE */
+.card h2{
+  margin:0 0 18px;
+  font-size:22px;
+}
+
+/* BUTTON */
 .btn{
-  background:#22c55e;
-  color:white;
-  padding:12px 20px;
-  border-radius:12px;
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:16px;
   text-decoration:none;
   font-weight:bold;
+  color:white;
+  font-size:16px;
 }
-.back{
-  position:fixed;
-  top:10px;
-  left:10px;
-  background:#ef4444;
-  color:white;
-  padding:10px 16px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
+
+/* ===== MÀU THEO KHỐI ===== */
+
+/* Tin học */
+.l3{ background:#e0f2fe; }
+.l3 .btn{ background:#0284c7; }
+
+.l4{ background:#ecfdf5; }
+.l4 .btn{ background:#16a34a; }
+
+.l5{ background:#fee2e2; }
+.l5 .btn{ background:#dc2626; }
+
+/* Công nghệ */
+.cn3{ background:#f3e8ff; }
+.cn3 .btn{ background:#7c3aed; }
+
+.cn4{ background:#fff7ed; }
+.cn4 .btn{ background:#ea580c; }
+
+.cn5{ background:#fef3c7; }
+.cn5 .btn{ background:#92400e; }
+
+/* MOBILE */
+@media (max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-
 <header>
-  <h1>💻TIN HỌC TIỂU HỌC</h1>
-  <p>Chọn khối lớp phù hợp để bắt đầu học tập nhé!</p>
+  <h1>💻 LMS TIN HỌC & CÔNG NGHỆ</h1>
+  <p>Chọn khối lớp để bắt đầu học tập</p>
 </header>
 
 <div class="container">
 
-  <div class="card">
-    <h2>Ôn tập HK1: Tin học 3</h2>
-    <a class="btn" href="scorm/OntapHK1(L3-2526)BP/index.html">VÀO HỌC</a>
+  <!-- TIN HỌC -->
+  <div class="group-title">📘 TIN HỌC</div>
+  <div class="grid">
+    <div class="card l3">
+      <h2>Tin học lớp 3</h2>
+      <a class="btn" href="scorm/OntapHK1(L3-2526)BP/index.html">VÀO HỌC</a>
+    </div>
+
+    <div class="card l4">
+      <h2>Tin học lớp 4</h2>
+      <a class="btn" href="scorm/OntapHK1(L4-2526)BP/index.html">VÀO HỌC</a>
+    </div>
+
+    <div class="card l5">
+      <h2>Tin học lớp 5</h2>
+      <a class="btn" href="scorm/OntapHK1(L5-2526)BP/index.html">VÀO HỌC</a>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>Ôn tập HK1: Tin học 4</h2>
-    <a class="btn" href="scorm/OntapHK1(L4-2526)BP/index.html">VÀO HỌC</a>
-  </div>
+  <!-- CÔNG NGHỆ -->
+  <div class="group-title">⚙️ CÔNG NGHỆ</div>
+  <div class="grid">
+    <div class="card cn3">
+      <h2>Công nghệ lớp 3</h2>
+      <a class="btn" href="scorm/OntapHK1(CN3-2526)BP/index.html">VÀO HỌC</a>
+    </div>
 
-  <div class="card">
-    <h2>Ôn tập HK1: Tin học 5</h2>
-    <a class="btn" href="scorm/OntapHK1(L5-2526)BP/index.html">VÀO HỌC</a>
-  </div>
+    <div class="card cn4">
+      <h2>Công nghệ lớp 4</h2>
+      <a class="btn" href="scorm/OntapHK1(CN4-2526)BP/index.html">VÀO HỌC</a>
+    </div>
 
-   <div class="card">
-    <h2>Ôn tập HK1: Công Nghệ 3</h2>
-    <a class="btn" href="scorm/OntapHK1(CN3-2526)BP/index.html">VÀO HỌC</a>
-  </div>
-
-  <div class="card">
-    <h2>Ôn tập HK1: Công Nghệ 4</h2>
-    <a class="btn" href="scorm/OntapHK1(CN4-2526)BP/index.html">VÀO HỌC</a>
-  </div>
-
-  <div class="card">
-    <h2>Ôn tập HK1: Công Nghệ 5</h2>
-    <a class="btn" href="scorm/OntapHK1(CN5-2526)BP/index.html">VÀO HỌC</a>
+    <div class="card cn5">
+      <h2>Công nghệ lớp 5</h2>
+      <a class="btn" href="scorm/OntapHK1(CN5-2526)BP/index.html">VÀO HỌC</a>
+    </div>
   </div>
 
 </div>
